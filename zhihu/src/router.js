@@ -2,13 +2,14 @@ import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import User from './views/user'
 import Login from './views/sign/Login'
-
+import { connect } from 'react-redux'
 import Register from './views/sign/register'
+import 'antd/dist/antd.css'
 
 class App extends Component {
     render() {
 
-        let isLogin = false;
+        const {isLogin} = this.props
 
         return (
             <Router>
@@ -25,4 +26,10 @@ class App extends Component {
     }
 }
 
-export default App
+function stateToProps(state) {
+    return {
+        isLogin: state.getIn(['sign', 'isLogin'])
+    }
+}
+
+export default connect(stateToProps, null)(App);
