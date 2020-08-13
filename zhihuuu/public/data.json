@@ -1,0 +1,18 @@
+{
+    "data":[
+        {
+            "type":"sign",
+            "data":true
+        }
+    ],
+    "userMessage":[
+        {
+            "name":"QQ",
+            "password":"67506"
+        },
+        {
+            "name":"mole",
+            "password":"kuailetongnian"
+        }
+    ]
+}
